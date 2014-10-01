@@ -1,5 +1,7 @@
 <?php namespace Woocommerce\Woocommerceapi;
   
+use WC_API_Client;
+
 class Woocommerceapi {
  
   /**
@@ -13,10 +15,6 @@ class Woocommerceapi {
   } 
 
   public static function return_client(){
-  	$file = '/woocommerce/woocommerceapi/src/Woocommerce/Woocommerceapi/Client.php';
-  	$file = 'Client.php';
-  	File::requireOnce($file);
-
 
     $consumer_key = 'ck_8e58340f9d4cab76d6ffa82267ef74b3'; // Add your own Consumer Key here
     $consumer_secret = 'cs_49c03fc4f70c828572d7b959218baded'; // Add your own Consumer Secret here
