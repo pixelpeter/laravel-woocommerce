@@ -1,5 +1,7 @@
 <?php namespace Woocommerce\Woocommerceapi;
 
+use Exception;
+
 /**
  * WooCommerce API Client Class
  *
@@ -11,7 +13,7 @@ class WoocommerceClient
   /**
    * API base endpoint
    */
-  const API_ENDPOINT = 'wc-api/v1/';
+  const API_ENDPOINT = 'wc-api/v2/';
 
   /**
    * The HASH alorithm to use for oAuth signature, SHA256 or SHA1
@@ -416,7 +418,7 @@ class WoocommerceClient
    *
    * @return mixed|json string
    */
-  private function _make_api_call( $endpoint, $params = array(), $method = 'GET' )
+  protected function _make_api_call( $endpoint, $params = array(), $method = 'GET' )
   {
     $ch = curl_init();
 
